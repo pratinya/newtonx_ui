@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 To start the project please use npm start.
 
-##Installation
+## Installation
 
 In order to run this project you would required node version v6.11.0 ,please install IDE of your own choice. This project was developed using visual studio code.
 
