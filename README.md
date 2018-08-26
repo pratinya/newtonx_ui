@@ -29,6 +29,6 @@ This project is developed to implement newtonx front end challenge using angular
 
 - Ultimately, the user will be able to continuously create and delete new lists, as well as items within those lists.
 
-###Important Note
+### Important Note
 
 - Drag and drop feature was implemented to move an item from one list to another. (In order to see this in action please make sure to hold the cursor on the list item value and drag completely until you drop it on the destination list)
