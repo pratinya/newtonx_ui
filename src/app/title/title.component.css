@@ -1,0 +1,18 @@
+.nav{
+     font-weight: bold;
+     text-align: left;
+}
+.pad{
+    padding: 50px;
+}
+
+.horpad{
+    margin: 0 10px;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+.del{
+    margin: 1px 5px 15px 40px;
+    float: right;
+   
+}

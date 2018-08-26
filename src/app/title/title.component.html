@@ -1,0 +1,36 @@
+<div class="container-fluid ">
+  <nav class="navbar navbar-light pad" style="background-color: #e3f2fd;">
+    <span class="navbar-text">
+     <h1>NewtonX</h1>
+  </span>
+    <input type="text" class="form-control input-lg" [(ngModel)]="item" name="item" placeholder="Enter a Title for the new List">
+    <br>
+    <button  type="Submit" class="btn btn-primary" (click)="addItems()">Add Item</button>
+    <br><br>
+     <div class="row" style="padding: 0px 0px 0px 5px;">
+      <ul class="list-inline">
+        <li *ngFor="let option of getItems()" class="list-group-item active col-sm-2 horpad" style="overflow:auto;">{{ option }}
+          <div (dragover)="allowDrop($event)" (drop)="onDrop($event, option)">
+            <button type="button" class="btn btn-danger del" (click)="deleteItem(option)">Delete Item</button>
+              <div class="input-group">
+                <input type="text" class="form-control" [(ngModel)]="subItem" name="subItem" placeholder="Enter an item">
+                <span class="input-group-btn">
+                 <button class="btn btn-default" type="button" (click)="addSubItems(option)">Add</button>
+               </span>
+              </div>
+            <div class="row">
+              <ul class="list-group" style="list-style:none">
+                <li *ngFor="let value of getSubItems(option)">
+                  <div class="input-group" style="width: 95%; padding: 15px;">
+                    <label draggable="true" (dragstart)="onDrag($event, option)">{{value}}</label>
+                    <button type="button" class="btn btn-danger input-sm pull-right" (click)="deleteSubItem(option,value)">Remove</button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
